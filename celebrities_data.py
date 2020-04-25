@@ -78,13 +78,6 @@ df['Image'] = Celebrities_Images
 df['Name']=Celebrities_Names
 df['Personality Traits']=Celebrities_Information
 
-def path_to_image_html(path):
-    return '<img src="'+ path + '" width="60" >'
-
-pd.set_option('display.max_colwidth', -1)
-
-df['Image'] = df['Image'].apply(path_to_image_html)
-HTML(df.to_html(escape=False ))
 
 # For CSV Dataset
 df.to_csv('celebrities_info.csv',index=False)
